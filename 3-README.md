@@ -2,7 +2,7 @@
 
 A Streamlit portfolio demo using a fixed historical snapshot from the Building Data Genome Project 2. It compares actual electricity use against a per-building model's expectation and lists hours for review.
 
-This is historical US data, not UAE validation or live monitoring. Flags are review candidates, not confirmed faults, waste, or savings.
+This is historical US data, not live monitoring. Flags are review candidates, not confirmed faults, waste, or savings.
 
 ## Run
 

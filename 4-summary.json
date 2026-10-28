@@ -1,0 +1,43 @@
+{
+  "version": "building-review-demo-v1-2026-10-25",
+  "building": "Fox_office_Thelma",
+  "holiday_mode": "sunday",
+  "timezone": "US/Mountain",
+  "test_period": "2017-01-01 to 2017-12-31",
+  "scored_hours": 8760,
+  "total_calendar_hours": 8760,
+  "unscored_hours": 0,
+  "review_hours": 103,
+  "review_fraction_pct": 1.1757990867579908,
+  "test_MAE_kwh": 10.02017791405941,
+  "positive_residual_threshold_kwh": 56.46249549339991,
+  "validation_hours": 4416,
+  "validation_above_threshold_hours": 45,
+  "quality": {
+    "building": "Fox_office_Thelma",
+    "site_id": "Fox",
+    "timezone": "US/Mountain",
+    "missing_kwh": 1,
+    "negative_kwh": 0,
+    "zero_kwh": 1,
+    "missing_temperature": 2,
+    "hours": 17544
+  },
+  "threshold_rule": "max(0, 99th percentile of all validation actual-minus-expected residuals); strictly greater",
+  "training": "Jan-Jun 2016, per-building fit; validation Jul-Dec 2016; test Jan-Dec 2017",
+  "expectation": "Uses weather and measured electricity at same hour 168 hours earlier; not a week-ahead forecast.",
+  "limitations": [
+    "US public BDG2 data, not UAE validation.",
+    "Thelma was selected after exploring three buildings.",
+    "No ground-truth faults: alert precision and false-alarm rate are unknown.",
+    "Review candidates, not confirmed waste, savings or independent events.",
+    "No retraining after validation. Residual threshold may drift with building use.",
+    "A low-use prior-week holiday can depress lag-based expectations the following week."
+  ],
+  "sources": [
+    "https://media.githubusercontent.com/media/buds-lab/building-data-genome-project-2/master/data/meters/raw/electricity.csv",
+    "https://media.githubusercontent.com/media/buds-lab/building-data-genome-project-2/master/data/weather/weather.csv",
+    "https://media.githubusercontent.com/media/buds-lab/building-data-genome-project-2/master/data/metadata/metadata.csv"
+  ],
+  "snapshot_note": "Reproduced from the original checked model on 2026-10-28; original model and review rule unchanged."
+}

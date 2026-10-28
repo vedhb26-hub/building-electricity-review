@@ -10,8 +10,8 @@ st.set_page_config(page_title='Building Electricity Review', page_icon='📊', l
 
 @st.cache_data
 def load_snapshot():
-    summary = json.loads((ROOT/'summary.json').read_text())
-    df = pd.read_csv(ROOT/'hourly_predictions.csv', parse_dates=['site_local_hour'])
+    summary = json.loads((ROOT/'4-summary.json').read_text())
+    df = pd.read_csv(ROOT/'5-hourly_predictions.csv', parse_dates=['site_local_hour'])
     assert len(df) == summary['scored_hours'] == 8760
     assert int(df.review_candidate.sum()) == summary['review_hours'] == 103
     assert abs((df.actual_kwh-df.expected_kwh).abs().mean()-summary['test_MAE_kwh']) < 1e-8

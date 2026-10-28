@@ -27,7 +27,7 @@
   "training": "Jan-Jun 2016, per-building fit; validation Jul-Dec 2016; test Jan-Dec 2017",
   "expectation": "Uses weather and measured electricity at same hour 168 hours earlier; not a week-ahead forecast.",
   "limitations": [
-    "US public BDG2 data, not UAE validation.",
+    "US public BDG2 data, historical data only.",
     "Thelma was selected after exploring three buildings.",
     "No ground-truth faults: alert precision and false-alarm rate are unknown.",
     "Review candidates, not confirmed waste, savings or independent events.",
